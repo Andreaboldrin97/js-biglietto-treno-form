@@ -11,22 +11,47 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-around">
-                <div class="mb-3">
-                    <label for="user_name" class="form-label">Email address</label>
+        <div class="row justify-content-center">
+            <h1 class="text-center mt-3 mb-5 col-12">Benvuto in trenitalia calcola il prezzo del tuo biglietto</h1>
+            <div class="row d-flex">
+                <div class="mb-3 col-12 col-md-4">
+                    <label for="user_name" class="form-label">Nome e Cognome</label>
                     <input type="text" class="form-control" id="user_name">
+                </div>
+                    <div class="mb-3 col-12 col-md-4">
+                    <label for="user_age" class="form-label">Fascia d'età</label>
+                    <select class="form-select" aria-label="Default select example" id="user_age">
+                        <option selected>Maggiorene</option>
+                        <option value="age_<18">Minorenne</option>
+                        <option value="age_>65">Maggiore di 65 anni</option>
+                    </select>
                   </div>
-                  <div class="mb-3">
-                    <label for="user_age" class="form-label">Password</label>
-                    <input type="text" class="form-control" id="user_age">
-                  </div>
-                  <div class="mb-3">
-                    <label for="km_tocover" class="form-label">Password</label>
+                  <div class="mb-3 col-12 col-md-4">
+                    <label for="km_tocover" class="form-label">Km da percorrere</label>
                     <input type="text" class="form-control" id="km_tocover">
                   </div>
             </div>
-            <button id="btn-generated" type="submit" class="btn btn-primary">genera</button>
+            <div class="d-flex justify-content-center">
+                <button id="btn-generated" type="submit" class="btn btn-primary m-3 ">genera</button>
+                <button id="btn-delete" type="submit" class="btn btn-primary m-3">anulla</button>
+            </div>
+        </div>
+        <div class="row">
+            <h1 class="text-center mt-3 mb-5">Ecco il tuo biglietto</h1>
+            <div class="row d-flex">
+                <div class="mb-3 col-12 col-md-4">
+                    <h3 id="name">NOME PASSEGGIERO <br></h3>
+                </div>
+                <div class="mb-3 col-12 col-md-4">
+                    <h3 id="carriage">Carrozza <br></h3>
+                </div>
+                <div class="mb-3 col-12 col-md-4">
+                    <h3 id="place">Codice CP <br></h3>
+                </div>
+                <div class="mb-3 col-12 col-md-4">
+                    <h3 id="price">Costo Biglietto <br></h3>
+                </div>
+            </div>
         </div>
     </div>
     <!-- JavaScript Bootstrap -->

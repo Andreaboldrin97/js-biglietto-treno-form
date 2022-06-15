@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center p-5">
             <h1 class="text-center mt-3 mb-5 col-12">Benvuto in trenitalia calcola il prezzo del tuo biglietto</h1>
             <div class="row d-flex">
                 <div class="mb-3 col-12 col-md-4">
@@ -22,8 +22,8 @@
                     <label for="user_age" class="form-label">Fascia d'età</label>
                     <select class="form-select" aria-label="Default select example" id="user_age">
                         <option selected>Maggiorene</option>
-                        <option value="age_<18">Minorenne</option>
-                        <option value="age_>65">Maggiore di 65 anni</option>
+                        <option value="age_<18" >Minorenne</option>
+                        <option value="age_>65" >Maggiore di 65 anni</option>
                     </select>
                   </div>
                   <div class="mb-3 col-12 col-md-4">
@@ -32,23 +32,23 @@
                   </div>
             </div>
             <div class="d-flex justify-content-center">
-                <button id="btn-generated" type="submit" class="btn btn-primary m-3 ">genera</button>
-                <button id="btn-delete" type="submit" class="btn btn-primary m-3">anulla</button>
+                <button id="btn-generated" type="submit" class="btn btn-success m-3 ">genera</button>
+                <button id="btn-delete" type="reset" class="btn btn-success m-3">anulla</button>
             </div>
         </div>
-        <div class="row">
+        <div class="row p-5">
             <h1 class="text-center mt-3 mb-5">Ecco il tuo biglietto</h1>
             <div class="row d-flex">
-                <div class="mb-3 col-12 col-md-4">
+                <div class="mb-3 col-12 col-md-3">
                     <h3 id="name">NOME PASSEGGIERO <br></h3>
                 </div>
-                <div class="mb-3 col-12 col-md-4">
+                <div class="mb-3 col-12 col-md-3">
                     <h3 id="carriage">Carrozza <br></h3>
                 </div>
-                <div class="mb-3 col-12 col-md-4">
+                <div class="mb-3 col-12 col-md-3">
                     <h3 id="c_booking">Codice CP <br></h3>
                 </div>
-                <div class="mb-3 col-12 col-md-4">
+                <div class="mb-3 col-12 col-md-3">
                     <h3 id="price">Costo Biglietto <br></h3>
                 </div>
             </div>

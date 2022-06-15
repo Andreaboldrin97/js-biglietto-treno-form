@@ -12,12 +12,20 @@ let carriageNumber ;
 //creo una var per il codice di prenotazione
 let codeBooking ;
 
-//creo una var per chiamare il btn
+//creo una var per il btn invia form
 let btnGenerated = document.getElementById('btn-generated');
+//creo una var per il btn calla form
+let btnDelete = document.getElementById('btn-delete');
 
 
 
 //?Compilazione form 
+
+btnDelete.addEventListener(`click`,
+function(){
+    document.getElementById(`user_name`).value = ``;
+    document.getElementById(`km_tocover`).value = ``;
+})
 
 btnGenerated.addEventListener(`click`, 
 function(){
@@ -73,6 +81,7 @@ function(){
     document.getElementById('price').innerHTML += Price + `€`;
 }
 )
+
 
 
 

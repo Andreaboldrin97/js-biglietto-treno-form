@@ -57,6 +57,8 @@ function(){
 
     if (isNaN(kmToCover) == true){
         alert(`i km da lei indicati non sono validi`);
+        carriageNumber = `0`;
+        codeBooking = `0`;
     } else {
             if( userAge == `age_<18`){
                 PriceDiscount=((PriceNoDiscount * 15 ) / 100);

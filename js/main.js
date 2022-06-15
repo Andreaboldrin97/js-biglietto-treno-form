@@ -9,6 +9,8 @@ let userAge ;
 let kmToCover ;
 //creo una var per il numero di carozza
 let carriageNumber ;
+//creo una var per il codice di prenotazione
+let codeBooking ;
 
 //creo una var per chiamare il btn
 let btnGenerated = document.getElementById('btn-generated');
@@ -28,6 +30,13 @@ function(){
     //creo una var per chiedere quanti km dovrà percorrere
     let kmToCover = parseInt(document.getElementById('km_tocover').value);
     console.log(kmToCover)
+    //creo una var per il numero di carozza
+    let carriageNumber = Math.floor((Math.random() * 10) + 1);
+    console.log(carriageNumber)
+    //creo una var per il codice di prenotazione
+    let codeBooking =((Math.random() * 100) + 1).toFixed(5);
+    console.log(codeBooking)
+
 
 
         //! creazione costo biglietto
@@ -43,10 +52,10 @@ function(){
     } else {
             if( userAge == `age_<18`){
                 PriceDiscount=((PriceNoDiscount * 15 ) / 100);
-            Price=( PriceNoDiscount - PriceDiscount ).toFixed(2);
+                Price=( PriceNoDiscount - PriceDiscount ).toFixed(2);
         }else if(userAge == `age_>65`){
                 PriceDiscount=((PriceNoDiscount * 35 ) / 100);
-            Price=( PriceNoDiscount - PriceDiscount ).toFixed(2);
+                Price=( PriceNoDiscount - PriceDiscount ).toFixed(2);
         }else{
                 Price=PriceNoDiscount.toFixed(2);
         }
@@ -59,6 +68,8 @@ function(){
     //! creazione biglietto
     
     document.getElementById('name').innerHTML += userName;
+    document.getElementById('carriage').innerHTML += carriageNumber;
+    document.getElementById('c_booking').innerHTML += codeBooking;
     document.getElementById('price').innerHTML += Price + `€`;
 }
 )

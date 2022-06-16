@@ -25,6 +25,10 @@ btnDelete.addEventListener(`click`,
 function(){
     document.getElementById(`user_name`).value = ``;
     document.getElementById(`km_tocover`).value = ``;
+    document.getElementById('name').innerHTML = ``;
+    document.getElementById('carriage').innerHTML = ``;
+    document.getElementById('c_booking').innerHTML = ``;
+    document.getElementById('price').innerHTML = ``;
 })
 
 btnGenerated.addEventListener(`click`, 
@@ -77,10 +81,10 @@ function(){
 
     //! creazione biglietto
     
-    document.getElementById('name').innerHTML += userName;
-    document.getElementById('carriage').innerHTML += carriageNumber;
-    document.getElementById('c_booking').innerHTML += codeBooking;
-    document.getElementById('price').innerHTML += Price + `€`;
+    document.getElementById('name').innerHTML = userName;
+    document.getElementById('carriage').innerHTML = carriageNumber;
+    document.getElementById('c_booking').innerHTML = codeBooking;
+    document.getElementById('price').innerHTML = Price + `€`;
 }
 )
 
